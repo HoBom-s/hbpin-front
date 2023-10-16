@@ -5,17 +5,11 @@
   "type": "module",
   "scripts": {
     "prepare": "husky install",
-    "format": "prettier --cache --write .",
     "dev": "vite",
     "build": "tsc && vite build",
+    "format": "prettier --cache --write .",
     "lint": "eslint --cache . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "lint-staged": "lint-staged",
     "preview": "vite preview"
-  },
-  "lint-staged": {
-    "**/*.{ts,tsx,js,jsx}": [
-      "eslint -fix"
-    ]
   },
   "dependencies": {
     "axios": "^1.5.1",
