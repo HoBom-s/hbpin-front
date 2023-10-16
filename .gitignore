@@ -26,6 +26,9 @@ dist-ssr
 # Package
 package-lock.json
 
+# Eslint cache
+.eslintcache
+
 # Environment
 .env
 .env.development
