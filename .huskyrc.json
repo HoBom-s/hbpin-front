@@ -1,6 +1,0 @@
-{
-  "hooks": {
-    "pre-commit": "echo 'HoBom FrontEnd pre-commit lint & prettier check !'",
-    "pre-push": "./huskyhooks/pre-push"
-  }
-}
