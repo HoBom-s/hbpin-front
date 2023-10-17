@@ -1,5 +1,15 @@
+import { ThemeProvider } from "styled-components";
+
+// assets
+import { GlobalStyle, theme } from "@/assets";
+
 function App() {
-  return <div>Hello</div>;
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      Hello HoBom !
+    </ThemeProvider>
+  );
 }
 
 export default App;
