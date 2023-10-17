@@ -1,3 +1,4 @@
+import { isNotNull, isObject, isEmptyObject } from "./is";
 import { parseCss } from "./parseCss";
 
-export { parseCss };
+export { isNotNull, isObject, isEmptyObject, parseCss };

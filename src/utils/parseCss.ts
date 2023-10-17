@@ -1,9 +1,5 @@
 // type
-import { Style } from "@/types/private/Style";
-
-type StyleObject = {
-  [key in keyof Style | string]: string | number;
-};
+import type { Style, StyleObject } from "@/types/Style";
 
 /**
  * CamelCase 식 문자열을 KebabCase로 변환
