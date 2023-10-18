@@ -1,6 +1,6 @@
 import { ThemeProvider } from "styled-components";
 
-import { Box, Button, Spinner } from "@/ui";
+import { Box, Button, Spinner, Stack } from "@/ui";
 
 // assets
 import { GlobalStyle, theme } from "@/assets";
@@ -28,6 +28,15 @@ function App() {
       <Button variant="fill" size="sm" label="안녕 호봄 !" />
       <Button size="md" label="안녕 호봄 !" />
       <Button size="lg" label="안녕 호봄 !" />
+      <Stack
+        direction="col"
+        align="center"
+        spaicng={2}
+        sx={{ border: "1px solid blue", width: "300px" }}
+      >
+        <Button size="md" label="안녕 호봄 !" />
+        <Button size="lg" label="안녕 호봄 !" />
+      </Stack>
     </ThemeProvider>
   );
 }
