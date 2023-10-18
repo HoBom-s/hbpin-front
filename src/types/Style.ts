@@ -33,6 +33,7 @@ export interface Style {
     | "left"
     | "right";
   placeItems?: string;
+  gap?: string;
   gridTemplateColumns?: string;
   gridTemplateRows?: string;
   zIndex?: number;
