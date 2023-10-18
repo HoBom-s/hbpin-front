@@ -4,6 +4,8 @@
  * layout, spacing, display, color etc...
  */
 export interface Style {
+  width?: string;
+  height?: string;
   color?: string;
   border?: string;
   borderRadius?: string;
@@ -11,7 +13,9 @@ export interface Style {
   boxShadow?: string;
   fontWeight?: string;
   fontSize?: string;
+  textAlign?: "start" | "end" | "center" | "justify";
   display?: "flex" | "grid" | "block" | "inline-block" | "inline";
+  flexDirection?: "row" | "row-reverse" | "column" | "column-reverse";
   alignItems?:
     | "center"
     | "start"
@@ -43,4 +47,17 @@ export interface Style {
   mr?: string | number;
   mb?: string | number;
   ml?: string | number;
+  cursor?: "pointer" | "default" | "move" | "auto" | "wait" | "help";
+}
+
+/**
+ * Indexing이 가능한 StyleObject type
+ * CSS를 parsing하기 위해서는 Indexing이 필요하다.
+ */
+export type StyleObject = {
+  [key in keyof Style | string]: string | number;
+};
+
+export interface StyleComponentProps {
+  $sx?: Style;
 }

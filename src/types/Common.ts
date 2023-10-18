@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 // types
-import type { Style } from "./private/Style";
+import type { Style } from "./Style";
 
 /**
  * Common Util Type 정의
@@ -32,8 +32,16 @@ export interface Children {
 
 export interface ComponentProps {
   /**
+   * Component에 ClassName이 있을 수도 있고 없을 수도 있다.
+   * 외부에서 Style조정이 필요한 경우 사용할 수 있으므로 추가.
+   */
+  className?: string;
+
+  /**
    * View 역할을 하는 Component에서 사용될 Style Props 정의
    * 주로 CSS에서 사용하는 속성들을 밀어 넣는다.
    */
   sx?: Partial<Style>;
+
+  onClick?: <T>(param?: T) => void;
 }

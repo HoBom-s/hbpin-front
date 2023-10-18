@@ -1,9 +1,9 @@
 // type
-import { Style } from "@/types/private/Style";
+import type { Style, StyleObject } from "@/types/Style";
 
-type StyleObject = {
-  [key in keyof Style | string]: string | number;
-};
+interface Space {
+  [key: string]: string;
+}
 
 /**
  * CamelCase 식 문자열을 KebabCase로 변환
@@ -20,6 +20,32 @@ const camelToKebab = (str: string): string => {
 };
 
 /**
+ * Padding, Margin과 같은 공간을 조작하는 Object를 parsing하여 변환
+ *
+ * @param {string} str
+ * @returns {string}
+ */
+const parseSpace = (str: string): string => {
+  const spaceObject: Space = {
+    p: "padding",
+    pt: "paddingTop",
+    pr: "paddingRight",
+    pb: "paddingBottom",
+    pl: "paddingLeft",
+    m: "margin",
+    mr: "marginRight",
+    mb: "marginBottom",
+    ml: "marginLeft",
+  };
+
+  if (spaceObject[str]) {
+    return spaceObject[str];
+  }
+
+  return str;
+};
+
+/**
  * CSS에 적용하기 위해 Style object를 CSS 문자열로 변환
  *
  * @param {Style} styleObject
@@ -31,7 +57,7 @@ export const parseCss = (styleObject: Style): string => {
       const obj: StyleObject = styleObject as StyleObject;
 
       if (obj[styleString]) {
-        return `${camelToKebab(styleString)}: ${obj[styleString]};`;
+        return `${camelToKebab(parseSpace(styleString))}: ${obj[styleString]};`;
       }
 
       return "";
