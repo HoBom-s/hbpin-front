@@ -23,5 +23,23 @@ declare module "styled-components" {
         lg: string;
       };
     };
+
+    // HoBom 색상 정의
+    colors: {
+      black600: string;
+      black700: string;
+      black900: string;
+      white700: string;
+    };
+
+    // HoBom font weight & size 정의
+    font: {
+      weight: {
+        fw100: string;
+        fw200: string;
+        fw400: string;
+        fw700: string;
+      };
+    };
   }
 }
