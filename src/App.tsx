@@ -1,6 +1,6 @@
 import { ThemeProvider } from "styled-components";
 
-import { Box, Spinner } from "@/ui";
+import { Box, Button, Spinner } from "@/ui";
 
 // assets
 import { GlobalStyle, theme } from "@/assets";
@@ -25,6 +25,9 @@ function App() {
         Hello HoBom !
         <Spinner size="sm" />
       </Box>
+      <Button variant="fill" size="sm" label="안녕 호봄 !" />
+      <Button size="md" label="안녕 호봄 !" />
+      <Button size="lg" label="안녕 호봄 !" />
     </ThemeProvider>
   );
 }
