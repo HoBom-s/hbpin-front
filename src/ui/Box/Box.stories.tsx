@@ -6,7 +6,11 @@ import { Box } from "./Box";
 type Story = StoryObj<typeof Box>;
 
 const BoxStoryBook: Meta<typeof Box> = {
-  title: "Box",
+  title: "UI/Box",
+  parameters: {
+    layout: "centered",
+  },
+  tags: ["autodocs"],
   component: Box,
 };
 

@@ -6,7 +6,11 @@ import { Spinner } from "./Spinner";
 type Story = StoryObj<typeof Spinner>;
 
 const SpinnerStoryBook: Meta<typeof Spinner> = {
-  title: "Spinner",
+  title: "UI/Spinner",
+  parameters: {
+    layout: "centered",
+  },
+  tags: ["autodocs"],
   component: Spinner,
 };
 
