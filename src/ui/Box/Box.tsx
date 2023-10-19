@@ -11,9 +11,10 @@ interface BoxProps extends ComponentProps {
   onClick?: <T>(param?: T) => void;
 }
 
-export const Box = ({ children, sx, onClick }: BoxProps) => {
+export const Box = ({ children, className, sx, onClick }: BoxProps) => {
   return (
     <BoxBase
+      className={className}
       $sx={{
         ...sx,
         width: isNotNull(sx?.width) ? sx?.width : "100%",

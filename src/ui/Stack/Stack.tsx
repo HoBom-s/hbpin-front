@@ -14,6 +14,7 @@ interface StackProps extends ComponentProps {
 
 export const Stack = ({
   children,
+  className,
   direction = "col",
   align = "left",
   spaicng,
@@ -22,7 +23,12 @@ export const Stack = ({
   const childs = Children.map(children, (child) => child)?.slice(0, spaicng);
 
   return (
-    <StackBase $direction={direction} $align={align} $sx={sx}>
+    <StackBase
+      className={className}
+      $direction={direction}
+      $align={align}
+      $sx={sx}
+    >
       {Array.from({ length: spaicng }).map((_, idx: number) => (
         <div key={idx} style={{ width: "auto" }}>
           {childs && childs[idx]}
