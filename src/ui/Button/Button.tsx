@@ -1,4 +1,8 @@
+import { useRef } from "react";
 import { ButtonBase } from "./style";
+
+// hook
+import { useRipple } from "@/hooks";
 
 // type
 import type { ComponentProps } from "@/types/Common";
@@ -23,8 +27,12 @@ export const Button = ({
   sx,
   onClick,
 }: ButtonProps) => {
+  const ref = useRef<HTMLButtonElement>(null);
+  useRipple(ref);
+
   return (
     <ButtonBase
+      ref={ref}
       $sx={{ ...sx }}
       $variant={variant}
       $fullWidth={fullWidth}
