@@ -24,6 +24,7 @@ export const Default: Story = {
     sx: {},
   },
   render: (args) => {
+    // eslint-disable-next-line
     const [value, setValue] = useState<string>("");
 
     return (
