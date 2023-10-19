@@ -30,6 +30,7 @@ declare module "styled-components" {
       black700: string;
       black900: string;
       white700: string;
+      gray200: string;
     };
 
     // HoBom font weight & size 정의

@@ -19,6 +19,7 @@ export const theme: DefaultTheme = {
     black700: "#3C3C3C",
     black900: "#000000",
     white700: "#FFFFFF",
+    gray200: "#E2E8F0",
   },
   font: {
     weight: {
