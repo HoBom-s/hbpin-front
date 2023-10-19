@@ -20,6 +20,6 @@ jobs:
         run: |
           npm run lint
         env:
-          BASE:
-            BASE: ${{ github.base_ref }}
-            HEAD: ${{ github.head_ref }}
+          CI: true
+          BASE: ${{ github.base_ref }}
+          HEAD: ${{ github.head_ref }}
