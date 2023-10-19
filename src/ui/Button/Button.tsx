@@ -8,6 +8,8 @@ import { useRipple } from "@/hooks";
 import type { ComponentProps } from "@/types/Common";
 
 interface ButtonProps extends ComponentProps {
+  type?: "button" | "submit";
+
   variant?: "outlined" | "fill";
 
   fullWidth?: boolean;
@@ -20,6 +22,8 @@ interface ButtonProps extends ComponentProps {
 }
 
 export const Button = ({
+  className,
+  type = "button",
   variant = "outlined",
   fullWidth = false,
   label,
@@ -32,14 +36,16 @@ export const Button = ({
 
   return (
     <ButtonBase
+      className={className}
       ref={ref}
+      type={type}
       $sx={{ ...sx }}
       $variant={variant}
       $fullWidth={fullWidth}
       $size={size}
       onClick={onClick}
     >
-      <span>{label}</span>
+      <span>{label.toUpperCase()}</span>
     </ButtonBase>
   );
 };
