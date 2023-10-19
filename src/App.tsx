@@ -7,7 +7,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      안녕
+      안녕 !
     </ThemeProvider>
   );
 }

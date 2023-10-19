@@ -9,6 +9,7 @@
     "build": "tsc && vite build",
     "format": "prettier --cache --write .",
     "lint": "eslint --cache . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint-diff": "eslint $(git diff --name-only --diff-filter=duxb origin/$BASE origin/$HEAD | grep -E '\\.((j|t)sx?)$' | xargs)",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
