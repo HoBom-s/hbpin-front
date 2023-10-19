@@ -21,6 +21,7 @@ export const Default: Story = {
     sx: {},
   },
   render: () => {
+    // eslint-disable-next-line
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     return (
