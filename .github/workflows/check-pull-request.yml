@@ -1,0 +1,26 @@
+name: Check Pull Request Workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          check-latest: true
+
+      - name: Check
+        run: |
+          npm run lint
+        env:
+          BASE:
+            CI: true
+            BASE: ${{ github.base_ref }}
+            HEAD: ${{ github.head_ref }}
