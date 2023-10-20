@@ -18,18 +18,21 @@ interface OutsideClick {
  */
 export const useOutsideClick = ({ ref, handler }: OutsideClick) => {
   useEffect(() => {
+    let observerRef: HTMLElement | null = null;
+
     document.addEventListener("click", (e: MouseEvent) => {
       if (ref.current && !ref.current.contains(e.target as Node)) {
+        observerRef = ref.current;
         handler();
       }
     });
 
     return () => {
       document.removeEventListener("click", (e: MouseEvent) => {
-        if (ref.current && !ref.current.contains(e.target as Node)) {
+        if (observerRef && !observerRef.contains(e.target as Node)) {
           handler();
         }
       });
     };
-  }, [ref, ref.current, handler]);
+  }, [ref, handler]);
 };
