@@ -33,6 +33,7 @@ declare module "styled-components" {
       white700: string;
       gray200: string;
       orange400: string;
+      boxShadow: string;
     };
 
     // HoBom font weight & size 정의
