@@ -31,5 +31,5 @@ export const useOutsideClick = ({ ref, handler }: OutsideClick) => {
         }
       });
     };
-  }, [ref, handler]);
+  }, [ref, ref.current, handler]);
 };
