@@ -11,7 +11,7 @@ const TextFieldStoryBook: Meta<typeof TextField> = {
   parameters: {
     layout: "centered",
   },
-  tags: ["autoducs"],
+  tags: ["autodocs"],
   component: TextField,
 };
 
