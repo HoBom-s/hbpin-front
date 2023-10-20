@@ -10,6 +10,8 @@ export interface Style {
   border?: string;
   borderRadius?: string;
   background?: string;
+  backgroundSize?: string;
+  backgroundImage?: string;
   boxShadow?: string;
   fontWeight?: string;
   fontSize?: string;

@@ -17,7 +17,7 @@ export const InputBase = styled.input<StyleComponentProps>`
   border: 1px solid #c0c0c0;
   border-radius: ${(props) => props.theme.border.radius.sm}px;
   box-sizing: border-box;
-  box-shadow: 0px 2px 10px #00000014;
+  box-shadow: ${(props) => props.theme.colors.boxShadow};
   padding: 8px;
 
   &:focus {

@@ -22,6 +22,7 @@ export const theme: DefaultTheme = {
     white700: "#FFFFFF",
     gray200: "#E2E8F0",
     orange400: "#FFA630",
+    boxShadow: "0px 2px 10px #00000014",
   },
   font: {
     weight: {

@@ -12,7 +12,7 @@ const FormLabelStoryBook: Meta<typeof FormLabel> = {
   parameters: {
     layout: "centered",
   },
-  tags: ["autoducs"],
+  tags: ["autodocs"],
   component: FormLabel,
 };
 
