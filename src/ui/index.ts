@@ -6,6 +6,9 @@ import { FormLabel } from "./FormLabel/FormLabel";
 import { Modal } from "./Modal/Modal";
 import { Spinner } from "./Spinner/Spinner";
 import { Stack } from "./Stack/Stack";
+import { Tab } from "./Tab/Tab";
+import { Tabs } from "./Tabs/Tabs";
+import { Text } from "./Text/Text";
 import { TextField } from "./TextField/TextField";
 
 export {
@@ -17,5 +20,8 @@ export {
   Modal,
   Spinner,
   Stack,
+  Tab,
+  Tabs,
+  Text,
   TextField,
 };

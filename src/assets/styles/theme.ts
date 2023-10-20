@@ -15,11 +15,13 @@ export const theme: DefaultTheme = {
     },
   },
   colors: {
+    black500: "1C2025",
     black600: "#535353",
     black700: "#3C3C3C",
     black900: "#000000",
     white700: "#FFFFFF",
     gray200: "#E2E8F0",
+    orange400: "#FFA630",
   },
   font: {
     weight: {
@@ -27,6 +29,10 @@ export const theme: DefaultTheme = {
       fw200: "200",
       fw400: "400",
       fw700: "700",
+    },
+    size: {
+      sm: "14px",
+      md: "16px",
     },
   },
 };
