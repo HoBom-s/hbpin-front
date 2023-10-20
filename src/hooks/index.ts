@@ -1,3 +1,4 @@
-import { useRipple } from "./ripple/useRipple";
+import { useOutsideClick } from "./common/useOutSideClick";
+import { useRipple } from "./common/useRipple";
 
-export { useRipple };
+export { useOutsideClick, useRipple };
