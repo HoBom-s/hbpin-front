@@ -23,7 +23,7 @@ export const Default: Story = {
     ],
     direction: "col",
     align: "left",
-    spaicng: 2,
+    spacing: 2,
     sx: {
       width: "200px",
       height: "200px",

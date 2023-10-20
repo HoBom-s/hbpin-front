@@ -9,7 +9,7 @@ interface StackProps extends ComponentProps {
   children: ChildrenAlias;
   direction?: "row" | "col";
   align?: "left" | "center" | "end";
-  spaicng: number;
+  spacing: number;
 }
 
 export const Stack = ({
@@ -17,10 +17,10 @@ export const Stack = ({
   className,
   direction = "col",
   align = "left",
-  spaicng,
+  spacing,
   sx,
 }: StackProps) => {
-  const childs = Children.map(children, (child) => child)?.slice(0, spaicng);
+  const childs = Children.map(children, (child) => child)?.slice(0, spacing);
 
   return (
     <StackBase
@@ -29,7 +29,7 @@ export const Stack = ({
       $align={align}
       $sx={sx}
     >
-      {Array.from({ length: spaicng }).map((_, idx: number) => (
+      {Array.from({ length: spacing }).map((_, idx: number) => (
         <div key={idx} style={{ width: "auto" }}>
           {childs && childs[idx]}
         </div>
