@@ -1,4 +1,6 @@
-import { useOutsideClick } from "./common/useOutSideClick";
+import { useOutsideClick } from "./common/useOutsideClick";
 import { useRipple } from "./common/useRipple";
 
-export { useOutsideClick, useRipple };
+import { useForm } from "./form/useForm";
+
+export { useOutsideClick, useRipple, useForm };
