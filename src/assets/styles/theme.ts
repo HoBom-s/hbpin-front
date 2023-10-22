@@ -15,11 +15,13 @@ export const theme: DefaultTheme = {
     },
   },
   colors: {
+    red400: "#cc3300",
     black500: "1C2025",
     black600: "#535353",
     black700: "#3C3C3C",
     black900: "#000000",
     white700: "#FFFFFF",
+    gray100: "#E9E9E9",
     gray200: "#E2E8F0",
     orange400: "#FFA630",
     boxShadow: "0px 2px 10px #00000014",
@@ -34,6 +36,7 @@ export const theme: DefaultTheme = {
     size: {
       sm: "14px",
       md: "16px",
+      lg: "18px",
     },
   },
 };
