@@ -8,7 +8,7 @@ interface TextFieldProps extends ComponentProps {
   type: "password" | "email" | "text";
   placeholder: string;
   name: string;
-  value: string;
+  value: string | number;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
