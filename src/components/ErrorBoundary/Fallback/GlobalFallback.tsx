@@ -42,7 +42,7 @@ export const GlobalFallback = () => {
         </Text>
         <Box sx={{ p: "12px" }}>
           <Button
-            variant="outlined"
+            variant="fill"
             label="Clear & reload"
             onClick={() => window.location.reload()}
           />
