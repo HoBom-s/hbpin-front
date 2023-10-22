@@ -4,7 +4,7 @@ import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
 import type { HttpBase } from "./HttpBase";
 
 export class Http implements HttpBase {
-  fetcher: AxiosInstance;
+  private fetcher: AxiosInstance;
 
   constructor() {
     this.fetcher = this.initializeAxios();
