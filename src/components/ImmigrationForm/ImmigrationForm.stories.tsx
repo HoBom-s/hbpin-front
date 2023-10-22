@@ -31,7 +31,8 @@ export const Defaul: Story = {
       password: {
         value: "",
         type: "password",
-        errMsg: "비밀번호는 영문, 숫자, 특수기호를 조합하여 8 ~ 15자리로 입력해 주세요.",
+        errMsg:
+          "비밀번호는 영문, 숫자, 특수기호를 조합하여 8 ~ 15자리로 입력해 주세요.",
         placeholder: "Please enter your username",
         isValid: false,
         isRequired: true,
