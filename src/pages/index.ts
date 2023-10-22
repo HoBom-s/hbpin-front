@@ -1,3 +1,3 @@
-import { Immigration } from "./Immigration";
+import { Immigration } from "./Immigration/Immigration";
 
 export { Immigration };
