@@ -1,4 +1,6 @@
-import { GlobalFallback } from "./errors/fallback/GlobalFallback";
-import { GlobalErrorBoundary } from "./errors/GlobalErrorBoundary";
+import { GlobalFallback } from "./ErrorBoundary/Fallback/GlobalFallback";
+import { GlobalErrorBoundary } from "./ErrorBoundary/GlobalErrorBoundary";
 
-export { GlobalFallback, GlobalErrorBoundary };
+import { ImmigrationForm } from "./ImmigrationForm/ImmigrationForm";
+
+export { GlobalFallback, GlobalErrorBoundary, ImmigrationForm };

@@ -26,11 +26,13 @@ declare module "styled-components" {
 
     // HoBom 색상 정의
     colors: {
+      red400: string;
       black500: string;
       black600: string;
       black700: string;
       black900: string;
       white700: string;
+      gray100: string;
       gray200: string;
       orange400: string;
       boxShadow: string;
@@ -50,6 +52,7 @@ declare module "styled-components" {
       size: {
         sm: string;
         md: string;
+        lg: string;
       };
     };
   }

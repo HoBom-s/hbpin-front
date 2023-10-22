@@ -1,10 +1,13 @@
 import { useState, useCallback, ChangeEvent } from "react";
 
-interface FormValue {
+export interface FormValue {
   [name: string]: {
     value: string | number;
     errMsg?: string;
+    type: "email" | "text" | "password";
+    placeholder: string;
     isValid: boolean;
+    isRequired: boolean;
     validate: (v: string | number) => boolean;
   };
 }
@@ -16,20 +19,20 @@ interface FormValueReturn {
 
 /**
  * @example
-   const { formValue, handleFormValueChange } = useForm({
-    username: {
-      value: "",
-      errMsg: "",
-      isValid: false,
-      validate: (v: string | number) => (v as string).length > 2,
-    },
-    password: {
-      value: "",
-      errMsg: "",
-      isValid: false,
-      validate: (v: string | number) => (v as string).length > 2,
-    },
-  });
+    const { formValue, handleFormValueChange } = useForm({
+      username: {
+        value: "",
+        errMsg: "",
+        isValid: false,
+        validate: (v: string | number) => (v as string).length > 2,
+      },
+      password: {
+        value: "",
+        errMsg: "",
+        isValid: false,
+        validate: (v: string | number) => (v as string).length > 2,
+      },
+    });
  * 
  * @param {FormValue} param 
  * @returns 
@@ -48,7 +51,10 @@ export const useForm = (param: FormValue): FormValueReturn => {
             [name]: {
               value: value,
               errMsg: prev[name].errMsg,
+              type: prev[name].type,
+              placeholder: prev[name].placeholder,
               isValid: true,
+              isRequired: prev[name].isRequired,
               validate: prev[name].validate,
             },
           };
@@ -60,7 +66,10 @@ export const useForm = (param: FormValue): FormValueReturn => {
             [name]: {
               value: value,
               errMsg: prev[name].errMsg,
+              type: prev[name].type,
+              placeholder: prev[name].placeholder,
               isValid: false,
+              isRequired: prev[name].isRequired,
               validate: prev[name].validate,
             },
           };
