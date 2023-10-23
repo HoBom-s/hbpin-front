@@ -1,8 +1,9 @@
-import { Suspense } from "react";
+import { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // project
-import { Immigration } from "@/pages";
+const ImmigrationPage = lazy(() => import("@/pages/Immigration"));
+
 import { Spinner } from "@/ui";
 
 export const PublicRouter = () => {
@@ -10,7 +11,7 @@ export const PublicRouter = () => {
     <Suspense fallback={<Spinner size="lg" />}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Immigration />} />
+          <Route path="/" element={<ImmigrationPage />} />
         </Routes>
       </BrowserRouter>
     </Suspense>
