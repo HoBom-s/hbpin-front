@@ -10,13 +10,17 @@ import type { ComponentProps } from "@/types/Common";
 interface ButtonProps extends ComponentProps {
   type?: "button" | "submit";
 
-  variant?: "outlined" | "fill";
+  variant?: "outlined" | "fill" | "text";
 
   fullWidth?: boolean;
 
   label: string;
 
   size?: "sm" | "md" | "lg";
+
+  flat?: boolean;
+
+  disabled?: boolean;
 
   onClick?: <T>(param?: T) => void;
 }
@@ -28,6 +32,8 @@ export const Button = ({
   fullWidth = false,
   label,
   size = "md",
+  flat = false,
+  disabled = false,
   sx,
   onClick,
 }: ButtonProps) => {
@@ -43,6 +49,8 @@ export const Button = ({
       $variant={variant}
       $fullWidth={fullWidth}
       $size={size}
+      $flat={flat}
+      disabled={disabled}
       onClick={onClick}
     >
       <span>{label.toUpperCase()}</span>
