@@ -1,6 +1,7 @@
 import { useState, MouseEvent } from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
+// project
 import { Tabs, Tab } from "..";
 
 type Story = StoryObj<typeof Tabs>;

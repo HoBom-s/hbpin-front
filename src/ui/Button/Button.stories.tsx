@@ -21,6 +21,7 @@ export const Outlined: Story = {
     fullWidth: false,
     label: "안녕 호봄 !",
     size: "md",
+    flat: false,
   },
 };
 
@@ -31,6 +32,7 @@ export const Fill: Story = {
     fullWidth: false,
     label: "안녕 호봄 !",
     size: "md",
+    flat: false,
   },
 };
 
