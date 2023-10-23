@@ -26,7 +26,8 @@ export const Tabs = <T,>({
     children,
     (child: ReactElement) => {
       const childValue = child.props.value;
-      const selectedTab: boolean = childValue === value;
+      const selectedTab: boolean =
+        JSON.stringify(childValue) == JSON.stringify(value);
 
       return cloneElement(child, {
         selected: selectedTab,
