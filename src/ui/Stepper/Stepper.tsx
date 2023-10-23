@@ -36,7 +36,7 @@ export const Stepper = ({
 
   const isNextButtonActive = useMemo(
     () => activeStep === totalStepLength,
-    [activeStep],
+    [activeStep, totalStepLength],
   );
 
   return (
