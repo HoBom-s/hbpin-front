@@ -8,7 +8,7 @@ import { Box } from "@/ui";
 // util
 import { isPassword } from "@/utils/is";
 
-export const Immigration = () => {
+const Immigration = () => {
   const { formValue, handleFormValueChange } = useForm({
     username: {
       value: "",
@@ -55,3 +55,5 @@ export const Immigration = () => {
     </Box>
   );
 };
+
+export default Immigration;

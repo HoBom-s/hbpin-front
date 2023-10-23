@@ -3,6 +3,7 @@ import { Button } from "./Button/Button";
 import { Divider } from "./DIvider/Divider";
 import { FormControl } from "./FormControl/FormControl";
 import { FormLabel } from "./FormLabel/FormLabel";
+import { Img } from "./Img/Img";
 import { Modal } from "./Modal/Modal";
 import { Spinner } from "./Spinner/Spinner";
 import { Stack } from "./Stack/Stack";
@@ -18,6 +19,7 @@ export {
   Divider,
   FormControl,
   FormLabel,
+  Img,
   Modal,
   Spinner,
   Stack,
