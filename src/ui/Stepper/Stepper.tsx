@@ -23,6 +23,7 @@ interface StepperProps extends ComponentProps {
 }
 
 export const Stepper = ({
+  className,
   activeStep,
   steps,
   sx,
@@ -40,7 +41,7 @@ export const Stepper = ({
   );
 
   return (
-    <Box sx={{ width: "100%", p: "10px", ...sx }}>
+    <Box className={className} sx={{ width: "100%", p: "10px", ...sx }}>
       <StepperBase>
         {steps.map((step: string, idxNo: number) => (
           <StepperItemWrapper

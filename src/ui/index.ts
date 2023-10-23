@@ -5,6 +5,7 @@ import { FormControl } from "./FormControl/FormControl";
 import { FormLabel } from "./FormLabel/FormLabel";
 import { Img } from "./Img/Img";
 import { Modal } from "./Modal/Modal";
+import { Skeleton } from "./Skeleton/Skeleton";
 import { Spinner } from "./Spinner/Spinner";
 import { Stack } from "./Stack/Stack";
 import { Stepper } from "./Stepper/Stepper";
@@ -21,6 +22,7 @@ export {
   FormLabel,
   Img,
   Modal,
+  Skeleton,
   Spinner,
   Stack,
   Stepper,
