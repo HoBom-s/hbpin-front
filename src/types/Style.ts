@@ -37,7 +37,8 @@ export interface Style {
     | "flex-start"
     | "flex-end"
     | "left"
-    | "right";
+    | "right"
+    | "space-between";
   placeItems?: string;
   gap?: string;
   gridTemplateColumns?: string;
