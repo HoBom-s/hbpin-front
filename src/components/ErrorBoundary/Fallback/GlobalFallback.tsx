@@ -1,10 +1,20 @@
+import { useEffect } from "react";
+
 // project
 import { Box, Stack, Text, Button } from "@/ui";
 
 // assets
 import { theme } from "@/assets";
 
-export const GlobalFallback = () => {
+interface GlobalFallbackProps {
+  error: Error | null;
+}
+
+export const GlobalFallback = ({ error }: GlobalFallbackProps) => {
+  useEffect(() => {
+    console.error(error);
+  }, []);
+
   return (
     <Box
       sx={{
