@@ -12,6 +12,9 @@ import { useForm } from "./form/useForm";
 // img
 import { useLazyLoadImage } from "./img/useLazyLoadImage";
 
+// map
+import { useMapInit } from "./map/useMapInit";
+
 // type
 import type { FormValue } from "./form/useForm";
 
@@ -22,5 +25,6 @@ export {
   useThrowAsyncError,
   useForm,
   useLazyLoadImage,
+  useMapInit,
   FormValue,
 };
