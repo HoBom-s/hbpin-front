@@ -6,11 +6,12 @@ import { Box, Stack, Text, Button } from "@/ui";
 // assets
 import { theme } from "@/assets";
 
-interface GlobalFallbackProps {
+interface GeoMapFallbackProps {
   error: Error | null;
+  onReset: () => void;
 }
 
-export const GlobalFallback = ({ error }: GlobalFallbackProps) => {
+export const GeoMapFallback = ({ error, onReset }: GeoMapFallbackProps) => {
   useEffect(() => {
     console.error(error);
   }, [error]);
@@ -48,14 +49,10 @@ export const GlobalFallback = ({ error }: GlobalFallbackProps) => {
           Oops...
         </Text>
         <Text variant="subtitle" sx={{ p: "20px" }}>
-          Something went wrong ! Clear and refresh.
+          지도를 불러오지 못했습니다.
         </Text>
         <Box sx={{ p: "12px" }}>
-          <Button
-            variant="fill"
-            label="Clear & reload"
-            onClick={() => window.location.reload()}
-          />
+          <Button variant="fill" label="다시 시도하기" onClick={onReset} />
         </Box>
       </Stack>
     </Box>

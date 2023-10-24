@@ -21,4 +21,5 @@ export const SideNavbarWrapper = styled.div<SideNavbarWrapperProps>`
     0 1px 2px rgba(60, 64, 67, 0.3),
     0 2px 3px 2px rgba(60, 64, 67, 0.15);
   position: fixed;
+  z-index: 10;
 `;
