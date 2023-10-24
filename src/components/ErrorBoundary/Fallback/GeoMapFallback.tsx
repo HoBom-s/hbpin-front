@@ -14,7 +14,7 @@ interface GeoMapFallbackProps {
 export const GeoMapFallback = ({ error, onReset }: GeoMapFallbackProps) => {
   useEffect(() => {
     console.error(error);
-  }, []);
+  }, [error]);
 
   return (
     <Box

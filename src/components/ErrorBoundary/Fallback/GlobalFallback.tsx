@@ -13,7 +13,7 @@ interface GlobalFallbackProps {
 export const GlobalFallback = ({ error }: GlobalFallbackProps) => {
   useEffect(() => {
     console.error(error);
-  }, []);
+  }, [error]);
 
   return (
     <Box
