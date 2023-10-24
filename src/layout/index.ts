@@ -1,3 +1,7 @@
+// Container
+import Container from "./Container/Container";
+
+// SideNavbar
 import { SideNavbar } from "./SideNavbar/SideNavbar";
 
-export { SideNavbar };
+export { Container, SideNavbar };

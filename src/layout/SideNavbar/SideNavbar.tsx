@@ -21,7 +21,7 @@ import {
   Text,
   Divider,
 } from "@/ui";
-import { Spot } from "@/components";
+import { Spot, ListRenderer } from "@/components";
 
 interface TabItem {
   key: string;
@@ -118,69 +118,28 @@ export const SideNavbar = () => {
         <Divider sx={{ mb: "10px" }} />
       </div>
       <Box sx={{ height: "calc(100vh - 240px)", overflowY: "auto" }}>
-        <Spot
-          name="호랑이카페"
-          rating={5}
-          spotImageUrl="https://picsum.photos/id/1/500/500"
-          address="중구 을지로 157"
-          business="영업 중 ⋅ 오후 9:00에 영업 종료"
-          mealKind="매장 내 식사 ⋅ 테이크아웃"
-        />
-        <Spot
-          name="호랑이카페"
-          rating={5}
-          spotImageUrl="https://picsum.photos/id/1/500/500"
-          address="중구 을지로 157"
-          business="영업 중 ⋅ 오후 9:00에 영업 종료"
-          mealKind="매장 내 식사 ⋅ 테이크아웃"
-        />
-        <Spot
-          name="호랑이카페"
-          rating={5}
-          spotImageUrl="https://picsum.photos/id/1/500/500"
-          address="중구 을지로 157"
-          business="영업 중 ⋅ 오후 9:00에 영업 종료"
-          mealKind="매장 내 식사 ⋅ 테이크아웃"
-        />
-        <Spot
-          name="호랑이카페"
-          rating={5}
-          spotImageUrl="https://picsum.photos/id/1/500/500"
-          address="중구 을지로 157"
-          business="영업 중 ⋅ 오후 9:00에 영업 종료"
-          mealKind="매장 내 식사 ⋅ 테이크아웃"
-        />
-        <Spot
-          name="호랑이카페"
-          rating={5}
-          spotImageUrl="https://picsum.photos/id/1/500/500"
-          address="중구 을지로 157"
-          business="영업 중 ⋅ 오후 9:00에 영업 종료"
-          mealKind="매장 내 식사 ⋅ 테이크아웃"
-        />
-        <Spot
-          name="호랑이카페"
-          rating={5}
-          spotImageUrl="https://picsum.photos/id/1/500/500"
-          address="중구 을지로 157"
-          business="영업 중 ⋅ 오후 9:00에 영업 종료"
-          mealKind="매장 내 식사 ⋅ 테이크아웃"
-        />
-        <Spot
-          name="호랑이카페"
-          rating={5}
-          spotImageUrl="https://picsum.photos/id/1/500/500"
-          address="중구 을지로 157"
-          business="영업 중 ⋅ 오후 9:00에 영업 종료"
-          mealKind="매장 내 식사 ⋅ 테이크아웃"
-        />
-        <Spot
-          name="호랑이카페"
-          rating={5}
-          spotImageUrl="https://picsum.photos/id/1/500/500"
-          address="중구 을지로 157"
-          business="영업 중 ⋅ 오후 9:00에 영업 종료"
-          mealKind="매장 내 식사 ⋅ 테이크아웃"
+        <ListRenderer
+          className="spot-list"
+          items={Array.from({ length: 20 })
+            .fill(0)
+            .map((_, idx: number) => ({
+              name: "호랑이카페",
+              rating: 5,
+              spotImageUrl: `https://picsum.photos/id/${idx + 1}/500/500`,
+              address: "중구 을지로 157",
+              business: "영업 중 ⋅ 오후 9:00에 영업 종료",
+              mealKind: "매장 내 식사 ⋅ 테이크아웃",
+            }))}
+          renderProps={(item) => (
+            <Spot
+              name={item.name}
+              rating={item.rating}
+              spotImageUrl={item.spotImageUrl}
+              address={item.address}
+              business={item.business}
+              mealKind={item.mealKind}
+            />
+          )}
         />
       </Box>
     </SideNavbarWrapper>
