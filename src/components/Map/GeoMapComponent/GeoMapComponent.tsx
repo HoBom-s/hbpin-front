@@ -30,7 +30,7 @@ export const MyGeoMapComponent = ({ center, zoom }: MyGeoMapComponentProps) => {
         },
       );
     }
-  }, [geoMapRef]);
+  }, [center, zoom, geoMapRef]);
 
   return (
     <div
