@@ -15,7 +15,9 @@ const GlobalFallbackStoryBook: Meta<typeof GlobalFallback> = {
 };
 
 export const Default: Story = {
-  args: {},
+  args: {
+    error: null,
+  },
 };
 
 export default GlobalFallbackStoryBook;
