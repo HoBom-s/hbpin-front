@@ -21,6 +21,7 @@ export const Default: Story = {
     placeholder: "https://picsum.photos/1/10/10",
     alt: "Image",
     bottomViewMargin: "100px",
+    bordered: true,
   },
 };
 

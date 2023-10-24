@@ -46,6 +46,7 @@ export interface ImageProps {
   src: string;
   placeholder: string;
   alt: string;
+  bordered?: boolean;
 }
 
 const ImageWithSuspense = ({
@@ -54,6 +55,7 @@ const ImageWithSuspense = ({
   placeholder,
   alt,
   bottomViewMargin,
+  bordered = false,
 }: ImageProps) => {
   const { imgRef, imgSrc } = useLazyLoadImage(
     src,
@@ -64,7 +66,7 @@ const ImageWithSuspense = ({
 
   imageCache.read(src);
 
-  return <ImageBase ref={imgRef} src={imgSrc} alt={alt} />;
+  return <ImageBase ref={imgRef} src={imgSrc} alt={alt} $bordered={bordered} />;
 };
 
 export const Img = ({
@@ -73,6 +75,7 @@ export const Img = ({
   placeholder,
   alt,
   bottomViewMargin,
+  bordered = false,
 }: ImageProps) => {
   return (
     <Suspense fallback={<Spinner />}>
@@ -82,6 +85,7 @@ export const Img = ({
         placeholder={placeholder}
         alt={alt}
         bottomViewMargin={bottomViewMargin}
+        bordered={bordered}
       />
     </Suspense>
   );
