@@ -50,6 +50,7 @@ declare module "styled-components" {
 
       // 크기
       size: {
+        xs: string;
         sm: string;
         md: string;
         lg: string;
