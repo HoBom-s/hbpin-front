@@ -5,19 +5,7 @@ import { MapRenderWrap } from "./style";
 import { Spinner } from "@/ui";
 import { MyGeoMapComponent } from "@/components";
 
-interface LatLngCenter {
-  lat: number;
-  lng: number;
-}
-
-const ZOOM: number = 10;
-
 export const Map = () => {
-  const center: LatLngCenter = {
-    lat: 37.413294,
-    lng: 127,
-  };
-
   const mapRenderProp = (status: Status) => {
     if (status === Status.FAILURE) {
       throw new Error(Status.FAILURE);
@@ -29,13 +17,13 @@ export const Map = () => {
       );
     }
 
-    return <MyGeoMapComponent center={center} zoom={ZOOM} />;
+    return <MyGeoMapComponent />;
   };
 
   return (
     <Wrapper
       apiKey={import.meta.env.VITE_APP_MAP_API_KEY}
       render={mapRenderProp}
-    ></Wrapper>
+    />
   );
 };

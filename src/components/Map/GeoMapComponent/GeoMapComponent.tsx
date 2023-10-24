@@ -1,36 +1,8 @@
-import { useRef, useEffect } from "react";
+// hook
+import { useMapInit } from "@/hooks";
 
-interface MyGeoMapComponentProps {
-  center: google.maps.LatLngLiteral;
-  zoom: number;
-}
-
-export const MyGeoMapComponent = ({ center, zoom }: MyGeoMapComponentProps) => {
-  const geoMapRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (geoMapRef.current) {
-      const geoMap: google.maps.Map = new window.google.maps.Map(
-        geoMapRef.current,
-        {
-          center: center,
-          zoom: zoom,
-        },
-      );
-
-      navigator.geolocation.getCurrentPosition(
-        (position: GeolocationPosition) => {
-          new window.google.maps.Marker({
-            position: {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude,
-            },
-            map: geoMap,
-          });
-        },
-      );
-    }
-  }, [center, zoom, geoMapRef]);
+export const MyGeoMapComponent = () => {
+  const { geoMapRef } = useMapInit();
 
   return (
     <div
