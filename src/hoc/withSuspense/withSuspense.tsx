@@ -1,18 +1,17 @@
-import { ComponentType, SuspenseProps, Suspense } from "react";
+import { ComponentType, Suspense } from "react";
 
-interface WithSuspenseProps {
-  WrappedComponent: ComponentType;
-  fallback: SuspenseProps["fallback"];
-}
+// project
+import { Spinner } from "@/ui";
+import { JSX } from "react/jsx-runtime";
 
-export const withSuspense = ({
-  WrappedComponent,
-  fallback,
-}: WithSuspenseProps) => {
-  const SupenseComponent = () => {
+export const withSuspense = (
+  WrappedComponent: ComponentType,
+  fallback = <Spinner />,
+) => {
+  const SupenseComponent = (props: JSX.IntrinsicAttributes) => {
     return (
       <Suspense fallback={fallback}>
-        <WrappedComponent />
+        <WrappedComponent {...props} />
       </Suspense>
     );
   };
