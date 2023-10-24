@@ -34,6 +34,7 @@ export const theme: DefaultTheme = {
       fw700: "700",
     },
     size: {
+      xs: "12px",
       sm: "14px",
       md: "16px",
       lg: "18px",

@@ -13,6 +13,8 @@ interface TabsBaseProps extends StyleComponentProps {
 export const TabsBase = styled.div<TabsBaseProps>`
   display: ${(props) => (props.$fullWidth ? "block" : "inline-block")};
 
+  overflow-x: auto;
+
   ${(props) => parseCss({ ...props.$sx })}
 `;
 
