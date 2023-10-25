@@ -56,8 +56,8 @@ export interface Style {
   mb?: string | number;
   ml?: string | number;
   cursor?: "pointer" | "default" | "move" | "auto" | "wait" | "help";
-  overflowY: string;
-  overflowX: string;
+  overflowY?: string;
+  overflowX?: string;
 }
 
 /**
