@@ -1,4 +1,8 @@
-import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
+import axios, { AxiosInstance, AxiosRequestConfig, isAxiosError } from "axios";
+import * as Sentry from "@sentry/react";
+
+// http
+import { HttpError } from "../HttpError/HttpError";
 
 // type
 import type { HttpBase } from "./HttpBase";
@@ -105,6 +109,10 @@ export class Http implements HttpBase {
   }
 
   private handlePromiseError(e: unknown): Promise<never> {
+    if (isAxiosError(e)) {
+      Sentry.captureException(new HttpError(e));
+    }
+
     return Promise.reject(e);
   }
 }
