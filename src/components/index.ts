@@ -17,6 +17,9 @@ import { ListRenderer } from "./ListRenderer/ListRenderer";
 import { Map } from "./Map/Map";
 import { GeoMapComponent } from "./Map/GeoMapComponent/GeoMapComponent";
 
+// QuickTabMenu
+import { QuickTabMenu } from "./QuickTabMenu/QuickTabMenu";
+
 // Spot
 import { Spot } from "./Spot/Spot";
 
@@ -30,5 +33,6 @@ export {
   ListRenderer,
   Map,
   GeoMapComponent,
+  QuickTabMenu,
   Spot,
 };
