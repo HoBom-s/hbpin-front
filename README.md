@@ -17,3 +17,5 @@ StoryBook: http://localhost:6006
 - 2. TypeScript
 - 3. Vite
 - 4. styled-components
+- 5. Sentry <> Discord
+- 6. Github Actions

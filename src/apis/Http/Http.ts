@@ -1,4 +1,8 @@
-import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
+import axios, { AxiosInstance, AxiosRequestConfig, isAxiosError } from "axios";
+import * as Sentry from "@sentry/react";
+
+// http
+import { HttpError } from "../HttpError/HttpError";
 
 // type
 import type { HttpBase } from "./HttpBase";
@@ -74,6 +78,10 @@ export class Http implements HttpBase {
         return config;
       },
       (error) => {
+        if (isAxiosError(error)) {
+          Sentry.captureException(new HttpError(error).toJSON());
+        }
+
         return Promise.reject(error);
       },
     );
@@ -97,6 +105,10 @@ export class Http implements HttpBase {
           return data;
         }
 
+        if (isAxiosError(error)) {
+          Sentry.captureException(new HttpError(error).toJSON());
+        }
+
         return Promise.reject(error);
       },
     );
@@ -105,6 +117,10 @@ export class Http implements HttpBase {
   }
 
   private handlePromiseError(e: unknown): Promise<never> {
+    if (isAxiosError(e)) {
+      Sentry.captureException(new HttpError(e).toJSON());
+    }
+
     return Promise.reject(e);
   }
 }
