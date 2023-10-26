@@ -8,6 +8,7 @@ export class HttpError<T = unknown> extends Error implements AxiosError<T> {
 
   code?: string;
 
+  // eslint-disable-next-line
   request?: any;
 
   response?: AxiosResponse<T>;
