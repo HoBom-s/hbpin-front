@@ -32,3 +32,4 @@ build
 # Environment
 .env
 .env.development
+.env.sentry-build-plugin
