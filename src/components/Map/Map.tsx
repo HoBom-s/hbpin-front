@@ -3,7 +3,7 @@ import { MapRenderWrap } from "./style";
 
 // project
 import { Spinner } from "@/ui";
-import { MyGeoMapComponent } from "@/components";
+import { GeoMapComponent } from "@/components";
 
 export const Map = () => {
   const mapRenderProp = (status: Status) => {
@@ -17,7 +17,7 @@ export const Map = () => {
       );
     }
 
-    return <MyGeoMapComponent />;
+    return <GeoMapComponent />;
   };
 
   return (
