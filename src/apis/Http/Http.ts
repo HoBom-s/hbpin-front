@@ -79,7 +79,7 @@ export class Http implements HttpBase {
       },
       (error) => {
         if (isAxiosError(error)) {
-          Sentry.captureException(new HttpError(error));
+          Sentry.captureException(new HttpError(error).toJSON());
         }
 
         return Promise.reject(error);
@@ -106,7 +106,7 @@ export class Http implements HttpBase {
         }
 
         if (isAxiosError(error)) {
-          Sentry.captureException(new HttpError(error));
+          Sentry.captureException(new HttpError(error).toJSON());
         }
 
         return Promise.reject(error);
@@ -118,7 +118,7 @@ export class Http implements HttpBase {
 
   private handlePromiseError(e: unknown): Promise<never> {
     if (isAxiosError(e)) {
-      Sentry.captureException(new HttpError(e));
+      Sentry.captureException(new HttpError(e).toJSON());
     }
 
     return Promise.reject(e);
