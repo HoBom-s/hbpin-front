@@ -1,7 +1,7 @@
 // hook
 import { useMapInit } from "@/hooks";
 
-export const MyGeoMapComponent = () => {
+export const GeoMapComponent = () => {
   const { geoMapRef } = useMapInit();
 
   return (
