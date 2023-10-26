@@ -78,6 +78,10 @@ export class Http implements HttpBase {
         return config;
       },
       (error) => {
+        if (isAxiosError(error)) {
+          Sentry.captureException(new HttpError(error));
+        }
+
         return Promise.reject(error);
       },
     );
@@ -99,6 +103,10 @@ export class Http implements HttpBase {
           const { data } = response;
 
           return data;
+        }
+
+        if (isAxiosError(error)) {
+          Sentry.captureException(new HttpError(error));
         }
 
         return Promise.reject(error);
