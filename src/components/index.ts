@@ -15,7 +15,10 @@ import { ListRenderer } from "./ListRenderer/ListRenderer";
 
 // Map
 import { Map } from "./Map/Map";
-import { MyGeoMapComponent } from "./Map/GeoMapComponent/GeoMapComponent";
+import { GeoMapComponent } from "./Map/GeoMapComponent/GeoMapComponent";
+
+// QuickTabMenu
+import { QuickTabMenu } from "./QuickTabMenu/QuickTabMenu";
 
 // Spot
 import { Spot } from "./Spot/Spot";
@@ -29,6 +32,7 @@ export {
   ImmigrationForm,
   ListRenderer,
   Map,
-  MyGeoMapComponent,
+  GeoMapComponent,
+  QuickTabMenu,
   Spot,
 };
