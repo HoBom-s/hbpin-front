@@ -5,8 +5,30 @@ import { MapRenderWrap, MapFloatingButtonWrap, MapRendererWrap } from "./style";
 import { Spinner, Box } from "@/ui";
 import { GeoMapComponent, QuickTabMenu, ListRenderer } from "@/components";
 
+// type
+import type { IconName } from "@/types/IconName";
+
+interface QuickTabMenuItem {
+  name: string;
+
+  iconName: IconName;
+}
+
 export const Map = () => {
-  const quickTabMenuItems: string[] = ["방문예정", "방문완료", "즐겨찾기"];
+  const quickTabMenuItems: QuickTabMenuItem[] = [
+    {
+      name: "방문예정",
+      iconName: "schedule",
+    },
+    {
+      name: "방문완료",
+      iconName: "done",
+    },
+    {
+      name: "즐겨찾기",
+      iconName: "star",
+    },
+  ];
 
   const mapRenderProp = (status: Status) => {
     if (status === Status.FAILURE) {
@@ -27,8 +49,8 @@ export const Map = () => {
             <ListRenderer
               className="quick-tab-menu"
               items={quickTabMenuItems}
-              renderProps={(menuName: string) => (
-                <QuickTabMenu name={menuName} />
+              renderProps={(item: QuickTabMenuItem) => (
+                <QuickTabMenu name={item.name} iconName={item.iconName} />
               )}
             />
           </MapRendererWrap>

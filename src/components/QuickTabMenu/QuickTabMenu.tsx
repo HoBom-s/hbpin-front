@@ -2,30 +2,44 @@
 import { theme } from "@/assets";
 
 // project
-import { Text } from "@/ui";
+import { Box, Text } from "@/ui";
+import { Icon } from "..";
+
+// type
+import type { IconName } from "@/types/IconName";
 
 interface QuickTabMenuProps {
   name: string;
+
+  iconName: IconName;
 }
 
-export const QuickTabMenu = ({ name }: QuickTabMenuProps) => {
+export const QuickTabMenu = ({ name, iconName }: QuickTabMenuProps) => {
   return (
-    <Text
+    <Box
       sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
         background: theme.colors.white700,
-        fontSize: theme.font.size.xs,
-        fontWeight: theme.font.weight.fw700,
         borderRadius: "32px",
         boxShadow: theme.colors.boxShadow,
         maxWidth: "150px",
         height: "30px",
         p: "0 10px",
-        display: "flex",
-        alignItems: "center",
+        gap: "4px",
         cursor: "pointer",
       }}
     >
-      {name}
-    </Text>
+      <Icon icon={iconName} />
+      <Text
+        sx={{
+          fontSize: theme.font.size.xs,
+          fontWeight: theme.font.weight.fw700,
+        }}
+      >
+        {name}
+      </Text>
+    </Box>
   );
 };

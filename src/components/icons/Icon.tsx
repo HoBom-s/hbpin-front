@@ -1,4 +1,8 @@
-import { AiFillStar } from "react-icons/ai";
+import {
+  AiFillStar,
+  AiOutlineSchedule,
+  AiOutlineFileDone,
+} from "react-icons/ai";
 
 // assets
 import { theme } from "@/assets";
@@ -22,6 +26,18 @@ export const Icon = ({
   switch (icon) {
     case "star": {
       return <AiFillStar style={{ color: color, fontSize: size }} />;
+    }
+
+    case "schedule": {
+      return <AiOutlineSchedule style={{ color: color, fontSize: size }} />;
+    }
+
+    case "done": {
+      return <AiOutlineFileDone style={{ color: color, fontSize: size }} />;
+    }
+
+    default: {
+      return null;
     }
   }
 };
