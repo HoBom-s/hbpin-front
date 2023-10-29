@@ -7,6 +7,7 @@ import { Spinner } from "@/ui";
 const ImmigrationPage = lazy(() => import("@/pages/Immigration"));
 const LayoutContainer = lazy(() => import("@/layout/Container/Container"));
 const GeoMapPage = lazy(() => import("@/pages/GeoMap"));
+const NotFoundPage = lazy(() => import("@/pages/NotFound"));
 
 export const PublicRouter = () => {
   return (
@@ -30,6 +31,7 @@ export const PublicRouter = () => {
           <Route path="/map" element={<LayoutContainer />}>
             <Route path="location" element={<GeoMapPage />} />
           </Route>
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </Suspense>
